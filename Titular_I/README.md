@@ -1,5 +1,7 @@
 # Titular I
 
-Este documento foi feito com base no modelo
-abtex2-modelo-projeto-pesquisa.tex, v-1.9.6 laurocesar
-Copyright 2012-2016 by abnTeX2 group at http://www.abntex.net.br/ 
+Memorial apresentado no Observatório Nacional, em 2020, para ingresso na classe
+**Titular I** do cargo de **Pesquisador** na carreira de **Pesquisa em Ciência e
+Tecnologia**, de acordo com a Lei no 8.691, de 28 de julho de 1993, que dispõe 
+sobre o Plano de Carreiras para a área de Ciência e Tecnologia da Administração
+Federal Direta, das Autarquias e das Fundações Federais.
