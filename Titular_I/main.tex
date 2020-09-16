@@ -1,0 +1,68 @@
+\documentclass{serrapilheira}
+
+\makeindex
+
+\begin{document}
+	
+\begin{titlepage}
+	\begin{center}
+		\vspace*{3cm}
+		
+		\LARGE
+		\textbf{Memorial das atividades científicas}
+		
+		\vspace{2.5cm}
+		\large
+		\textbf{Vanderlei C. Oliveira Jr.}
+		
+		\hspace{.45\textwidth}
+		\begin{minipage}{.5\textwidth}
+			\vspace{3.0cm}
+			\normalsize
+			Memorial das atividades científicas submetido à Comissão de Promoção de
+			Pesquisadores e Tecnologistas (CPPT) do Observatório Nacional (ON) para
+			ingresso na classe \textbf{Titular I} do cargo de \textbf{Pesquisador},  
+			carreira de \textbf{Pesquisa em Ciência e Tecnologia}, de acordo com 
+			a Lei no 8.691, que dispõe sobre o Plano de Carreiras para a área de 
+			Ciência e Tecnologia da Administração Federal Direta, das Autarquias e 
+			das Fundações Federais.
+		\end{minipage}%
+		\vspace*{\fill}
+		
+		
+		\vspace{0.8cm}
+		
+		\small
+		Observatório Nacional\\
+		Coordenação de Geofísica \\
+		Setembro, 2020
+		
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\chapter{Apresentação}
+\renewcommand\refname{}
+\input{apresentacao}
+
+\newpage
+\chapter{Considerações pessoais}
+\renewcommand\refname{}
+\input{consideracoes}
+
+\chapter{Descrição das atividades desenvolvidas desde 2011}
+\renewcommand\refname{}
+\input{atividades}
+
+
+% Biliography
+\newpage
+%\chapter*{Produção científica}
+%\renewcommand\refname{Produção científica}
+\renewcommand\bibname{Produção científica total}
+\bibliography{papers,conferences}
+
+
+\end{document}
