@@ -1,0 +1,159 @@
+% !TeX TS-program = lualatex
+% use lualatex because of academicons
+
+%\documentclass[11pt,a4paper,onecolumn]{article}
+\documentclass[11pt,a4paper,onecolumn,openany]{book}
+
+% -- begin Packages
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+
+% Package for Style customization in single-sided documents
+\usepackage{fancyhdr}
+
+
+%\usepackage{lipsum}
+\usepackage{wrapfig}
+%\usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{enumitem}
+\usepackage{worldflags}
+
+%\usepackage[brazil,english]{babel}
+\usepackage[brazil]{babel}
+
+% --
+% for including individual full refecenre in text
+% --
+\usepackage[square,numbers]{natbib}
+\usepackage{bibentry}
+\nobibliography*
+% --
+
+\usepackage[colorlinks=true, 
+linkcolor=blue, 
+urlcolor=blue,
+citecolor=blue
+]{hyperref}
+
+
+\frenchspacing % Better looking spacings after periods
+%\pagestyle{empty}           % No pagenumbers/headers/footers
+
+% The command above will ensure that if two files are encountered with the same basename 
+% but different extensions (for example image.eps, image.pdf, image.jpeg and image.png), 
+% then the .eps version will be used first, .pdf version will be used second, .jpeg will be used
+% third and finnaly the .png will be used in the absence of other versions
+\DeclareGraphicsExtensions{.eps,.pdf,.jpeg,.png,.jpg}
+
+% -- end Packages
+
+% -- begin Macros
+
+\newcommand{\FundingEntry}[9]{
+	% agency, language, title, language, title, id, grant name, amount, period
+	\noindent #1, Título (#2): \textit{#3}, Título (#4): \textit{#5}, ID: #6, Modalidade: #7, R\$ #8, #9.}
+
+\newcommand{\ThesisEntry}[9]{
+	% type (MSc or PhD), ID flag worldflag, title, ID flag worldflag, title, student, institution, year conclusion, my participation
+	\def\tempa{#1}%
+	\def\tempb{#2}%
+	\def\tempc{#3}%
+	\def\tempd{#4}%
+	\def\tempe{#5}%
+	\def\tempf{#6}%
+	\def\tempg{#7}%
+	\def\temph{#8}%
+	\def\tempi{#9}%
+	\ThesisEntrycont
+}
+\newcommand{\ThesisEntrycont}[1]{
+	% doi number
+	\noindent \textbf{[\tempa]}
+	Título (\tempb): \textit{\tempc}, Título (\tempd): \textit{\tempe}, 
+	Autor(a): \tempf, 
+	\textsl{\tempg} (\temph). [\textsf{#1}].  \sloppy{\texttt{\textbf{doi:}}~\href{https://doi.org/\tempi}{\texttt{\tempi}}}}
+
+\newcommand{\Student}[5]{
+	% #1 level (MSc or PhD), #2 main or co supervisor, #3 name, since #4, #5 institution
+	\noindent \textbf{[#1]} Estudante: #2, \textbf{#3} \dotfill 
+	\parbox{0.17\textwidth}{\hfill desde~#4} \\
+	\noindent\textsl{#5}}
+
+% -- end Macros
+
+\makeindex
+
+\begin{document}
+
+% -- begin title page
+	
+\begin{titlepage}
+	\begin{center}
+		\vspace*{3cm}
+
+		\LARGE
+		\textbf{Memorial das atividades científicas}
+
+		\vspace{2.5cm}
+		\large
+		\textbf{Vanderlei C. Oliveira Jr.}
+
+		\hspace{.45\textwidth}
+		\begin{minipage}{.5\textwidth}
+			\vspace{3.0cm}
+			\normalsize
+			Memorial das atividades científicas submetido à Comissão de Promoção de
+			Pesquisadores e Tecnologistas (CPPT) do Observatório Nacional (ON) para
+			ingresso na classe \textbf{Titular III} do cargo de \textbf{Pesquisador},  
+			carreira de \textbf{Pesquisa em Ciência e Tecnologia}, de acordo com 
+			a Lei no 8.691, que dispõe sobre o Plano de Carreiras para a área de 
+			Ciência e Tecnologia da Administração Federal Direta, das Autarquias e 
+			das Fundações Federais.
+		\end{minipage}%
+		\vspace*{\fill}
+
+		\vspace{0.8cm}
+			
+		\small
+		Observatório Nacional\\
+		Coordenação de Geofísica \\
+		Julho, 2022
+
+	\end{center}
+\end{titlepage}
+
+% -- end title page
+
+% -- begin summary
+\fancyhf{}
+\tableofcontents
+\fancyhf{}
+% -- end summary
+
+% set customized page style with package fancyhdr
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{Capítulo \thechapter: \chaptername}
+\rfoot{\thepage}
+
+\include{apresentacao}
+\include{resumo-atividades}
+\include{detalhe-atividades}
+\include{consideracoes-finais}
+
+
+\bibliographystyle{abbrvnat}
+% for some reason, it is necessary to run by using \bibliography,
+% and then byy using \nobibliography
+\nobibliography{papers,conferences}
+
+\end{document}
