@@ -13,3 +13,8 @@ minha vida acadêmica.
 Pesquisador Titular I na área de Ciência e Tecnologia da
 Administração Federal Direta, das Autarquias e das Fundações
 Federais.
+
+> `Titular_III`: memorial apresentado para ingresso na classe de
+Pesquisador Titular III na área de Ciência e Tecnologia da
+Administração Federal Direta, das Autarquias e das Fundações
+Federais.
