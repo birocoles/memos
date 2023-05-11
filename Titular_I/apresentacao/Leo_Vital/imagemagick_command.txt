@@ -2,3 +2,11 @@ comando para gerar a animação da recontrução com o imagemagick
 
 convert -delay 50 -dispose 2 -loop 0 complex_0.png complex_1.png complex_2.png complex_3.png complex_4.png complex_5.png complex_6.png complex_7.png  complex_8.png complex_9.png complex_10.png complex_11.png complex_12.png  animation_radial_mag.gif
 
+para comprimir caso fique muito grande
+
+fiz uma copia chamada animation_radial_mag2.gif depois executei o comando abaixo
+
+mogrify -layers 'optimize' -fuzz 7% animation_radial_mag2.gif
+
+
+
